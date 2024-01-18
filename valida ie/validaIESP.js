@@ -8,6 +8,23 @@ function validaIESP() {
 
     if(inscricao.lenght == 12){
 
+         const digitoverificador = restoString.charAt(1)
+
+     
+         if(ie[8] == digitoverificador  ){
+        return true
+     }else{
+       return false
+     }
+
+
+         if(ie[4] == digitoverificador  ){
+            return true
+          }else{
+       return false
+     }
+
+         
          // primeiro calcúlo //
 
 const pesos1 = [1, 3, 4, 5, 6, 7, 8, 10];
