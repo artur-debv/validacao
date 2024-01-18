@@ -25,7 +25,7 @@ function validaIESP() {
      }
 
          
-         // primeiro calcúlo //
+         // primeiro cálculo //
 
 const pesos1 = [1, 3, 4, 5, 6, 7, 8, 10];
 
@@ -49,7 +49,7 @@ const restoString = resto.toString()
 console.log(restoString.charAt(1));
 
 
-// segundo calcúlo
+// segundo cálculo
 
 let ie3 = [];
 
@@ -73,7 +73,7 @@ console.log(restoString1)
 
 }else if(isncricao.lenght == 13){
 
- // terceiro calcúlo  //
+ // terceiro cálculo  //
 
 const pesos3 = [1,3,4,5,6,7,8,10];
 
