@@ -38,7 +38,7 @@ for (let i = 0; i < 8; i++) {
 
 console.table(ie2);
 
-const somaProdutos1 = ie2.reduce(function (acu
+const somaProdutos1 = ie2.reduce(function (acumulador,valor)
   return acumulador + valor;
 }, 0);
 
@@ -59,7 +59,7 @@ for (let i = 0; i < 11; i++) {
   ie3.push(parseInt(ie[i], 10) * pesos2[i]);
 }
 
-const somaProdutosb = ie3.reduce(function (acu
+const somaProdutosb = ie3.reduce(function (acumulador, valor)
   return acumulador + valor;
 }, 0);
 
