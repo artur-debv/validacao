@@ -35,6 +35,11 @@ function validaIERS() {
 
     const digitoverificador1 = restoString.charAt(1)
    
+    if(ie[9]== digitoverificador1){
+        return true
+    }else{
+        return false
+    }
 
 }
 
