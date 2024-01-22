@@ -33,9 +33,9 @@ function validaIERS() {
     console.table(ie2)
     console.log(digitoVerificador)
 
-    const digitoverificador1 = restoString.charAt(1)
+    const digitoverificador = restoString.charAt(1)
    
-    if(ie[9]== digitoverificador1){
+    if(ie[9]== digitoverificador){
         return true
     }else{
         return false
