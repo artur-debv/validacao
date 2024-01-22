@@ -9,7 +9,7 @@ function validaIEAC() {
     // primeiro cálculo
 
     const peso = [4,3,2,9,8,7,6,5,4,3,2];
-    const ie = "01004823001";
+    const ie = "0100482300112";
     const ie2 = [];
 
 
