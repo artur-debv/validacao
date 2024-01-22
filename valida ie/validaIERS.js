@@ -7,7 +7,7 @@ function validaIERS() {
     }
 
     const peso = [2, 9, 8, 7, 6, 5, 4, 3, 2];
-    const ie = "224365879";
+    const ie = "2243658792";
     const ie2 = [];
 
     
