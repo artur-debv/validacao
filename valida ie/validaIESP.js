@@ -7,7 +7,7 @@ function validaIESP() {
      return null;
  }
 
- if(inscricao.lenght == 12){
+ if(inscricao.length == 12){
 
       // primeiro cálculo //
 
