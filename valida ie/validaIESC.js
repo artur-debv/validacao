@@ -32,8 +32,16 @@ function validaIESC() {
 
 console.log(digitoVerificador)
 
-const digitoverificador1 = resto.charAt(1)
-const digitoverificador2 = resto.charAt(1)
+const digitoverificador = resto.charAt(1)
+
+
+if(ie[8] == digitoverificador){
+    return true
+}else{
+    return true
+}
+
+
 
 }
 
