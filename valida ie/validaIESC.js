@@ -7,7 +7,7 @@ function validaIESC() {
     }
 
     const peso = [9,8,7,6,5,4,3,2];
-    const ie = "25104085";
+    const ie = "251040852";
     const ie2 = [];
 
    
