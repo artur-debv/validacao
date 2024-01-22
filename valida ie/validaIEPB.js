@@ -7,7 +7,7 @@ function validaIEPB() {
     }
 
     const peso = [9,8,7,6,5,4,3,2];
-    const ie = "06000001";
+    const ie = "060000015";
     const ie2 = [];
 
 
