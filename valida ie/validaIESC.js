@@ -32,8 +32,8 @@ function validaIESC() {
 
 console.log(digitoVerificador)
 
-const digitoverificador1 = restoString.charAt(1)
-const digitoverificador2 = restoString.charAt(1)
+const digitoverificador1 = resto.charAt(1)
+const digitoverificador2 = resto.charAt(1)
 
 }
 
