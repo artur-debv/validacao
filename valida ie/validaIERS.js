@@ -33,7 +33,7 @@ function validaIERS() {
     console.table(ie2)
     console.log(digitoVerificador)
 
-    const digitoverificador = restoString.charAt(1)
+    const digitoverificador = resto.charAt(1)
    
     if(ie[9]== digitoverificador){
         return true
