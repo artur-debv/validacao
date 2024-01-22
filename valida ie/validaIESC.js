@@ -31,7 +31,7 @@ function validaIESC() {
 
     console.log(digitoVerificador)
 
-    if (ie[8] == digitoverificador) {
+    if (ie[8] == digitoVerificador) {
         return true
     } else {
         return true
