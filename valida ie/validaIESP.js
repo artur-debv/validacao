@@ -86,8 +86,8 @@ console.log(restoString3)
 return false
 }
 
-const digitoverificador1 = restoString.charAt(1)
-const digitoverificador2 = restoString.charAt(1)
+const digitoverificador1 = resto.charAt(1)
+const digitoverificador2 = resto.charAt(1)
 
 if(ie[8] == digitoverificador1 && ie[4] == digitoverificador2){
   return true
