@@ -16,7 +16,8 @@ const pesos1 = [1, 3, 4, 5, 6, 7, 8, 10];
 let ie = "110042490114";
 let ie2 = [];
 
-const digitoverificador = restoString.charAt(1)
+const digitoverificador1 = restoString.charAt(1)
+const digitoverificador2 = restoString.charAt(1)
 /*
 if(ie[8] == digitoverificador && ie[4] == digitoverificador){
   return true
