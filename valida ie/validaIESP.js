@@ -54,6 +54,12 @@ const restoString1 = resto2.toString()
 
 console.log(restoString1)
 
+
+if(ie[8] == digitoverificador1 && ie[4] == digitoverificador2){
+  return true
+}else{
+  return false
+}
  
 
 }else if(isncricao.lenght == 13){
@@ -62,7 +68,7 @@ console.log(restoString1)
 
 const pesos3 = [1,3,4,5,6,7,8,10];
 
-let ieb = "01100424";
+let ieb = "01100424002";
 let ie4 = [];
 
 for (let i = 0; i < 8; i++) {
@@ -86,10 +92,10 @@ console.log(restoString3)
 return false
 }
 
-const digitoverificador1 = resto.charAt(1)
-const digitoverificador2 = resto.charAt(1)
+const digitoverificador3 = resto.charAt(1)
 
-if(ie[8] == digitoverificador1 && ie[4] == digitoverificador2){
+
+if(ie[8] == digitoverificador3){
   return true
 }else{
   return false
