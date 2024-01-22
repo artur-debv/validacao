@@ -65,6 +65,9 @@ function validaIEAC() {
     console.log(resto2)
     console.log(digitoVerificador1)
 
+    const digitoverificador1 = restoString.charAt(1)
+    const digitoverificador2 = restoString.charAt(1)
+
 }
 
 export default validaIEAC
