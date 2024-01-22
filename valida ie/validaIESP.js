@@ -55,6 +55,9 @@ const restoString1 = resto2.toString()
 console.log(restoString1)
 
 
+const digitoverificador1 = resto.charAt(1)
+const digitoverificador2 = resto.charAt(1)
+
 if(ie[8] == digitoverificador1 && ie[4] == digitoverificador2){
   return true
 }else{
