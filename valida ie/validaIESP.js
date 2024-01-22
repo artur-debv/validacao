@@ -69,9 +69,9 @@ const restoString1 = resto2.toString()
 
 console.log(restoString1)
          
-    }
+    
 
-}else if(isncricao.lenght == 13){
+}else if(inscricao.lenght == 13){
 
  // terceiro cálculo  //
 
