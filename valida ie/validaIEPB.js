@@ -34,8 +34,13 @@ function validaIEPB() {
   console.table(ie2)
   console.log(resto)
 
-  const digitoverificador = restoString.charAt(1)
+  const digitoverificador = resto.charAt(1)
   
+  if(ie[8] == digitoverificador){
+    return true
+  }else{
+    return false
+  }
 
 }
 export default validaIEPB
