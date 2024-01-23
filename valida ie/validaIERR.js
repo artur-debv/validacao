@@ -25,6 +25,13 @@ if (validainscricao) {
     console.log(somaProdutos)
     console.table(ie2)
 
+    let digitoverficador
+    if(ie[8] == digitoverficador){
+       return true
+    }else{
+        return false
+    }
+
 } else {
     false
 }
