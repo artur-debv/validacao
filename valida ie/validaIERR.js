@@ -25,8 +25,8 @@ if (validainscricao) {
     console.log(somaProdutos)
     console.table(ie2)
 
-    let digitoverficador
-    if(ie[8] == digitoverficador){
+    let digitoVerificador
+    if(ie[8] == digitoVerificador){
        return true
     }else{
         return false
