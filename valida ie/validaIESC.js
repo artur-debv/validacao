@@ -1,42 +1,40 @@
-function validaIESC() {
+let inscricao = "251040852";
 
-    // Verificar se a inscrição tem o tamanho esperado
-    if (inscricao.length !== 8) {
-        console.error('A inscrição estadual de Santa Catarina deve conter 9 dígitos.');
-        return null;
-    }
+inscricao = inscricao.replace(/\D/g, '');
 
+const validainscricao = /^[0-9]{9}$/.test(inscricao);
+
+if (validainscricao) {
     const peso = [9, 8, 7, 6, 5, 4, 3, 2];
-    const ie = "251040852";
-    const ie2 = [];
-
+    const ie = [];
 
     for (let i = 0; i < 8; i++) {
-        ie2.push(parseInt(ie[i]) * peso[i]);
+        ie.push(parseInt(inscricao[i]) * peso[i]);
     }
 
-    const somaProdutos = ie2.reduce(function (acumulador, valor) {
+    const somaProdutos = ie.reduce(function (acumulador, valor) {
         return acumulador + valor;
     }, 0);
 
     const resto = somaProdutos % 11;
 
-
     let digitoVerificador;
     if (resto === 0 || resto === 1) {
         digitoVerificador = 0;
+
     } else {
         digitoVerificador = 11 - resto;
     }
 
     console.log(digitoVerificador)
 
-    if (ie[8] == digitoVerificador) {
+    if (inscricao[8] == digitoVerificador) {
         return true
+
     } else {
         return true
     }
 
+} else {
+    false
 }
-
-export default validaIESC

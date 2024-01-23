@@ -1,44 +1,41 @@
-function validaIERS() {
+let inscricao = "2243658792";
 
-    // Verificar se a inscrição tem o tamanho esperado
-    if (inscricao.length !== 9) {
-        console.error('A inscrição estadual do Rio Grande do Sul deve conter 10 dígitos.');
-        return null;
-    }
+inscricao = inscricao.replace(/\D/g, '');
 
+const validainscricao = /^[0-9]{10}$/.test(inscricao);
+
+if (validainscricao) {
     const peso = [2, 9, 8, 7, 6, 5, 4, 3, 2];
-    const ie = "2243658792";
-    const ie2 = [];
-
+    const ie = [];
 
     for (let i = 0; i < 9; i++) {
-        ie2.push(parseInt(ie[i]) * peso[i]);
+        ie.push(parseInt(inscricao[i]) * peso[i]);
     }
 
-
-    const somaProdutos1 = ie2.reduce(function (acumulador, valor) {
+    const somaProdutos1 = ie.reduce(function (acumulador, valor) {
         return acumulador + valor;
     }, 0);
 
     const resto = somaProdutos1 % 11;
 
-
     let digitoVerificador;
     if (resto === 10 || resto === 11) {
         digitoVerificador = 0;
+
     } else {
         digitoVerificador = 11 - resto;
     }
 
-    console.table(ie2)
     console.log(digitoVerificador)
 
-    if (ie[9] == digitoverificador) {
+    if (inscricao[9] == digitoVerificador) {
         return true
+
     } else {
         return false
     }
 
+} else {
+    false
 }
 
-export default validaIERS

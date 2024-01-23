@@ -1,11 +1,9 @@
-function validaIEPR() {
+inscricao = inscricao.replace(/\D/g, '');
 
-     // Verificar se a inscrição tem o tamanho esperado
-     if (inscricao.length !== 9) {
-        console.error('A inscrição estadual do Paraná deve conter 10 dígitos.');
-        return null;
-    }
+const validainscricao = /^[0-9]{10}$/.test(inscricao);
 
+if (validainscricao) {
+    true
+} else {
+    false
 }
-
-export default validaIEPR

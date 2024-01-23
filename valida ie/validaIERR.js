@@ -1,10 +1,9 @@
-function validaIERR() {
+inscricao = inscricao.replace(/\D/g, '');
 
-     // Verificar se a inscrição tem o tamanho esperado
-     if (inscricao.length !== 8) {
-        console.error('A inscrição estadual de Roraima deve conter 9 dígitos.');
-        return null;
-    }
+const validainscricao = /^[0-9]{9}$/.test(inscricao);
+
+if (validainscricao) {
+    true
+} else {
+    false
 }
-
-export default validaIERR

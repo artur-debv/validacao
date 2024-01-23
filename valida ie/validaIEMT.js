@@ -1,11 +1,9 @@
-function validaIEMT() {
+inscricao = inscricao.replace(/\D/g, '');
 
-     // Verificar se a inscrição tem o tamanho esperado
-     if (inscricao.length !== 10) {
-        console.error('A inscrição estadual do Mato Grosso deve conter 11 dígitos.');
-        return null;
-    }
+const validainscricao = /^[0-9]{11}$/.test(inscricao);
 
+if (validainscricao) {
+    true
+} else {
+    false
 }
-
-export default validaIEMT

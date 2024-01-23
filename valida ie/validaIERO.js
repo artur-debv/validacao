@@ -41,9 +41,9 @@ if (inscricao.length === 9) {
         console.log(digitoVerificador)
     
     } else {
-        console.log("Inscrição inválida");
+       false
     }
 
 } else {
-    console.log("Inscrição inválida");
+    false
 }

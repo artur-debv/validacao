@@ -31,5 +31,5 @@ if (validainscricao) {
     console.log(digitoVerificador)
 
 } else {
-    console.log("Inscrição inválida");
+    false
 }

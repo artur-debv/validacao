@@ -1,11 +1,23 @@
-function validaIEBA() {
+inscricao = inscricao.replace(/\D/g, '');
 
-    // Verificar se a inscrição tem o tamanho esperado
-    if (inscricao.length !== 7 || inscricao.length !== 8) {
-        console.error('A inscrição estadual da Bahia deve conter 8 ou 9 dígitos.');
-        return null;
+if (inscricao.length === 8) {
+    const validainscricao = /^[0-9]{8}$/.test(inscricao);
+
+    if (validainscricao) {
+
+    } else {
+        console.log("Inscrição inválida");
     }
 
-}
+} else if (inscricao.length === 9) {
+    const validainscricao = /^[0-9]{9}$/.test(inscricao);
 
-export default validaIEBA
+    if (validainscricao) {
+
+    } else {
+        false
+    }
+
+} else {
+    false
+}
