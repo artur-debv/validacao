@@ -32,6 +32,12 @@ if (validainscricao) {
       console.table(ie2)
       console.log(produto)
       console.log(resto)
+
+      if(ie[8] == digitoVerificador){
+        return true
+      }else{
+        return false
+      }
     
 } else {
     false
