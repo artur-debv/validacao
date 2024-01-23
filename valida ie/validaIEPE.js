@@ -29,7 +29,7 @@ if (validainscricao) {
   }
 
   console.log(digitoVerificador1)
-
+  
   // segundo cálculo
   const peso2 = [9, 8, 7, 6, 5, 4, 3, 2];
   const ie2 = [];
@@ -53,6 +53,12 @@ if (validainscricao) {
   }
 
   console.log(digitoVerificador2);
+
+  if(ie[4] == digitoVerificador1 && ie2[0] == digitoVerificador2){
+    return true
+  }else{
+    return false
+  }
 
 } else {
   false
