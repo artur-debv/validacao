@@ -18,14 +18,19 @@ if (validainscricao) {
 
     const resto = somaProdutos % 11;
 
-    let digitoVerificador;
     if (resto <= 1) {
         digitoVerificador = 0;
     } else {
         digitoVerificador = 11 - resto;
     }
 
-    console.log(digitoVerificador)
+    if (inscricao[7] == digitoVerificador) {
+        //console.log('sim')
+        true
+    } else {
+        //console.log('não')
+        false
+    }
 
 } else {
     false
