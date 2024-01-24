@@ -1,4 +1,4 @@
-let inscricao = "99.999.999-9";
+let inscricao = "99.999.999-0";
 
 inscricao = inscricao.replace(/\D/g, '');
 
@@ -27,7 +27,13 @@ if (validainscricao) {
         }
     }
 
-    console.table(digitoVerificador)
+    if (inscricao[8] == digitoVerificador) {
+        //console.log('sim')
+        true
+      } else {
+        //console.log('não')
+        false
+      }
 
 } else {
     false
