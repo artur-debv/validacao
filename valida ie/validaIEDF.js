@@ -20,15 +20,11 @@ if (validainscricao) {
     }, 0)
 
     const resto = somaProdutos % 11;
-    
-    if (resto === 0 || resto === 1) {
+    digitoVerificador = 11 - resto;
+
+    if (digitoVerificador === 10 || digitoVerificador === 11) {
         digitoVerificador = 0;
-    } else {
-        digitoVerificador = 11 - resto;
     }
-
-    console.log(digitoVerificador)
-
 
     //segundo cálculo
 
@@ -45,15 +41,20 @@ if (validainscricao) {
     }, 0)
 
     const resto2 = somaProdutos2 % 11;
-    
-    if (resto2 === 0 || resto2 === 1) {
+    digitoVerificador2 = 11 - resto2;
+
+    if (digitoVerificador2 === 10 || digitoVerificador2 === 11) {
         digitoVerificador2 = 0;
+    }
+    
+    if (inscricao[11] == digitoVerificador && inscricao[12] == digitoVerificador2) {
+        //console.log('sim')
+        true
     } else {
-        digitoVerificador2 = 11 - resto2;
+        //console.log('não')
+        falses
     }
 
-    console.log(digitoVerificador2)
-    
 } else {
     false
 }
