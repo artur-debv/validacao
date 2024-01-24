@@ -5,6 +5,7 @@ inscricao = inscricao.replace(/\D/g, '');
 const validainscricao = /^[0-9]{13}$/.test(inscricao);
 
 if (validainscricao) {
+
     // primeiro cálculo
 
     const peso = [4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
@@ -20,14 +21,11 @@ if (validainscricao) {
 
     const resto = somaProdutos % 11;
 
-    if (resto === 10 || resto === 11) {
+    digitoVerificador1 = 11 - resto;
+
+    if (digitoVerificador1 === 10 || digitoVerificador1 === 11) {
         digitoVerificador1 = 0;
-
-    } else {
-        digitoVerificador1 = 11 - resto;
     }
-
-    console.log(digitoVerificador1)
 
     // segundo cálculo 
 
@@ -44,14 +42,19 @@ if (validainscricao) {
 
     const resto2 = somaProdutos2 % 11;
 
-    if (resto2 === 10 || resto2 === 11) {
-        digitoVerificador2 = 0;
+    digitoVerificador2 = 11 - resto2;
 
-    } else {
-        digitoVerificador2 = 11 - resto2;
+    if (digitoVerificador2 === 10 || digitoVerificador2 === 11) {
+        digitoVerificador2 = 0;
     }
 
-    console.log(digitoVerificador2)
+    if (inscricao[11] == digitoVerificador1 && inscricao[12] == digitoVerificador2) {
+        //console.log('sim')
+        true
+    } else {
+        //console.log('não')
+        false
+    }
 
 } else {
     false
