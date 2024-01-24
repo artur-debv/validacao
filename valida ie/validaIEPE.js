@@ -28,8 +28,6 @@ if (validainscricao) {
     digitoVerificador1 = 11 - resto;
   }
 
-  console.log(digitoVerificador1)
-  
   // segundo cálculo
   const peso2 = [9, 8, 7, 6, 5, 4, 3, 2];
   const ie2 = [];
@@ -52,12 +50,12 @@ if (validainscricao) {
     digitoVerificador2 = 11 - resto2;
   }
 
-  console.log(digitoVerificador2);
-
-  if(ie[4] == digitoVerificador1 && ie2[0] == digitoVerificador2){
-    return true
-  }else{
-    return false
+  if (inscricao[7] == digitoVerificador1 && inscricao[8] == digitoVerificador2) {
+    //console.log('sim')
+    true
+  } else {
+    //console.log('não')
+    false
   }
 
 } else {
