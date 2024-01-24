@@ -21,15 +21,16 @@ if (validainscricao) {
     }, 0)
 
     const resto = somaProdutos % 11;
-    
-    digitoVerificador = 11 - resto;
-    
-    console.log(digitoVerificador)
 
+    if (resto === 0 || resto === 1) {
+        digitoVerificador = 0;
+    } else {
+        digitoVerificador = 11 - resto;
+    }
 
     // segundo cálculo
 
-    const pesos2 = [4,3, 2, 7, 6, 5, 4, 3, 2];
+    const pesos2 = [4, 3, 2, 7, 6, 5, 4, 3, 2];
     let ie2 = [];
 
 
@@ -42,14 +43,20 @@ if (validainscricao) {
     }, 0)
 
     const resto2 = somaProdutos2 % 11;
-    
+
     if (resto2 === 0 || resto2 === 1) {
         digitoVerificador2 = 0;
     } else {
         digitoVerificador2 = 11 - resto2;
     }
 
-    console.log(digitoVerificador2)
+    if (inscricao[8] == digitoVerificador && inscricao[9] == digitoVerificador2) {
+        //console.log('sim')
+        true
+    } else {
+        //console.log('não')
+        false
+    }
 
 } else {
     false
