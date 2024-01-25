@@ -42,6 +42,15 @@ if (validainscricao) {
     console.log(somaProdutos)
     console.table(ie)
     console.log(resto)
+
+    if(inscricao[8] == digitoVerificador){
+        // console.log("Sim")
+        return true
+    }else{
+        // console.log("Não")
+        return false
+    }
+
 } else {
     false
 }
