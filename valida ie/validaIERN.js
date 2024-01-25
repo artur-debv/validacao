@@ -13,7 +13,7 @@ if (validainscricao) {
 
 
     for (let i = 0; i < 8; i++) {
-     ie2.push(parseInt(ie[i]) * peso[i]);
+     ie2.push(parseInt(inscricao[i]) * peso[i]);
     }
 
 
@@ -45,7 +45,7 @@ if (validainscricao) {
 
 
     for (let i = 0; i < 8; i++) {
-    ie4.push(parseInt(ie3[i]) * peso1[i]);
+    ie4.push(parseInt(inscricao[i]) * peso1[i]);
     }
 
 
