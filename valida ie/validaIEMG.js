@@ -56,6 +56,8 @@ if (validainscricao) {
   console.table(ie) 
   console.log(resto2) 
 
+  
+
 } else {
     false
 }
