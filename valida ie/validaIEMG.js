@@ -1,4 +1,4 @@
-let inscricao = "062307904008";
+let inscricao = "062.307.904/0081";
 
 inscricao = inscricao.replace(/\D/g, '');
 
