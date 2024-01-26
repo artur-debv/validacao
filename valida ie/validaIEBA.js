@@ -53,7 +53,7 @@ if (inscricao.length === 8) {
                 true
             } else {
                 //console.log('não')
-                falses
+                false
             }
 
         } else {
@@ -212,7 +212,7 @@ if (inscricao.length === 8) {
                 true
             } else {
                 //console.log('não')
-                falses
+                false
             }
         }
 
