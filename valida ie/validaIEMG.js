@@ -6,58 +6,52 @@ const validainscricao = /^[0-9]{13}$/.test(inscricao);
 
 if (validainscricao) {
 
-    // primeiro Cálculo
+  // primeiro Cálculo
 
-    const peso1 = [3,2,1,1,1,0,9,8,7,6,5,4,3,2];
-    const ie1 = [];
-    
-    
-    for (let i = 0; i < 8; i++) {
-      ie1.push(parseInt(inscricao[i]) * peso1[i]);
-    }
-    
-    
-    const somaProdutos1 = ie1.reduce(function (acumulador, valor) {
-      return acumulador + valor;
-    }, 0);
-    
-    const resto = somaProdutos1 % 11;
-    
-    let digitoVerificador;
-    if (resto <= 1) {
-      digitoVerificador = 0;
-    } else {
-      digitoVerificador = 11 - resto;
-    }
-    
-    console.log(resto)
-    console.table(ie)
-    console.log(digitoVerificador)
+  const inscricaoSlice = inscricao.slice(0, 3) + "0" + inscricao.slice(3);
+  const peso = [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2];
+  const ie = [];
 
-    // segundo Cálculo 
-
-    const inscricaoSlice = inscricao.slice(0, 3) + "0" + inscricao.slice(3);
-
-    const peso = [1,2,1,2,1,2,1,2,1,2,1,2];
-    const ie = [];
-
-    for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i++) {
     ie.push(parseInt(inscricaoSlice[i]) * peso[i]);
   }
 
   const somaProdutos = ie.reduce((acumulador, valor) => {
-  const digitos = valor.toString().split('').map(Number);
-  return acumulador + digitos.reduce((a, b) => a + b, 0);
-}, 0);
+    const digitos = valor.toString().split('').map(Number);
+    return acumulador + digitos.reduce((a, b) => a + b, 0);
+  }, 0);
 
-  const resto2 = (10 - (somaProdutos % 10)) % 10;
+  const digitoVerificador = (10 - (somaProdutos % 10)) % 10;
 
-  console.log(somaProdutos)
-  console.table(ie) 
-  console.log(resto2) 
+  // segundo Cálculo 
 
-  
+  const peso2 = [3, 2, 1, 1, 1, 0, 9, 8, 7, 6, 5, 4, 3, 2];
+  const ie2 = [];
+
+  for (let i = 0; i < 8; i++) {
+    ie2.push(parseInt(inscricao[i]) * peso2[i]);
+  }
+
+  const somaProdutos1 = ie2.reduce(function (acumulador, valor) {
+    return acumulador + valor;
+  }, 0);
+
+  const resto = somaProdutos1 % 11;
+
+  if (resto <= 1) {
+    digitoVerificador2 = 0;
+  } else {
+    digitoVerificador2 = 11 - resto;
+  }
+
+  if (inscricao[11] == digitoVerificador && inscricao[12] == digitoVerificador2) {
+    // console.log('sim')
+    true
+  } else {
+    // console.log('não')
+    false
+  }
 
 } else {
-    false
+  false
 }
