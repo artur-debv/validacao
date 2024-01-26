@@ -48,6 +48,14 @@ if (inscricao.length === 8) {
                 digitoVerificador = 0
             }
 
+            if (inscricao[6] == digitoVerificador && inscricao[7] == digitoVerificador) {
+                //console.log('sim')
+                true
+            } else {
+                //console.log('não')
+                falses
+            }
+
         } else {
             //segundo digito 
             const peso2 = [7, 6, 5, 4, 3, 2];
@@ -88,6 +96,14 @@ if (inscricao.length === 8) {
 
             if (resto === 0 || resto === 1) {
                 digitoVerificador = 0
+            }
+
+            if (inscricao[6] == digitoVerificador && inscricao[7] == digitoVerificador) {
+                //console.log('sim')
+                true
+            } else {
+                //console.log('não')
+                falses
             }
         }
 
@@ -141,47 +157,63 @@ if (inscricao.length === 8) {
                 digitoVerificador = 0
             }
 
+            if (inscricao[7] == digitoVerificador && inscricao[8] == digitoVerificador) {
+                //console.log('sim')
+                true
+            } else {
+                //console.log('não')
+                falses
+            }
+
         } else {
-             //segundo digito 
-             const peso2 = [8, 7, 6, 5, 4, 3, 2];
-             const ie2 = [];
- 
-             for (let i = 0; i < 7; i++) {
-                 ie2.push(parseInt(inscricao[i]) * peso2[i]);
-             }
- 
-             const somaProdutos2 = ie2.reduce(function (acumulador, valor) {
-                 return acumulador + valor;
-             }, 0);
- 
-             const resto2 = somaProdutos2 % 11;
- 
-             const digitoVerificador2 = 11 - resto2
- 
-             if (resto2 === 0 || resto2 === 1) {
-                 digitoVerificador2 = 0
-             }
- 
-             //primeiro digito
-             let inscricaoSlice = inscricao.slice(0, 7) + inscricao.slice(8);
-             const peso = [9, 8, 7, 6, 5, 4, 3, 2];
-             const ie = [];
- 
-             for (let i = 0; i < 8; i++) {
-                 ie.push(parseInt(inscricaoSlice[i]) * peso[i]);
-             }
- 
-             const somaProdutos = ie.reduce(function (acumulador, valor) {
-                 return acumulador + valor;
-             }, 0);
- 
-             const resto = somaProdutos % 11;
- 
-             digitoVerificador = 11 - resto
- 
-             if (resto === 0 || resto === 1) {
-                 digitoVerificador = 0
-             }
+            //segundo digito 
+            const peso2 = [8, 7, 6, 5, 4, 3, 2];
+            const ie2 = [];
+
+            for (let i = 0; i < 7; i++) {
+                ie2.push(parseInt(inscricao[i]) * peso2[i]);
+            }
+
+            const somaProdutos2 = ie2.reduce(function (acumulador, valor) {
+                return acumulador + valor;
+            }, 0);
+
+            const resto2 = somaProdutos2 % 11;
+
+            const digitoVerificador2 = 11 - resto2
+
+            if (resto2 === 0 || resto2 === 1) {
+                digitoVerificador2 = 0
+            }
+
+            //primeiro digito
+            let inscricaoSlice = inscricao.slice(0, 7) + inscricao.slice(8);
+            const peso = [9, 8, 7, 6, 5, 4, 3, 2];
+            const ie = [];
+
+            for (let i = 0; i < 8; i++) {
+                ie.push(parseInt(inscricaoSlice[i]) * peso[i]);
+            }
+
+            const somaProdutos = ie.reduce(function (acumulador, valor) {
+                return acumulador + valor;
+            }, 0);
+
+            const resto = somaProdutos % 11;
+
+            digitoVerificador = 11 - resto
+
+            if (resto === 0 || resto === 1) {
+                digitoVerificador = 0
+            }
+
+            if (inscricao[7] == digitoVerificador && inscricao[8] == digitoVerificador) {
+                //console.log('sim')
+                true
+            } else {
+                //console.log('não')
+                falses
+            }
         }
 
     } else {
