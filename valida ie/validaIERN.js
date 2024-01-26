@@ -1,11 +1,12 @@
-
-let inscricao = "20040040";
+let inscricao = "20.0.040.040-0";
 
 inscricao = inscricao.replace(/\D/g, '');
 
-const validainscricao = /^[0-9]{9}$/.test(inscricao);
+if (inscricao.length === 9) {
+  const validainscricao = /^[0-9]{9}$/.test(inscricao);
 
-if (validainscricao) {
+  if (validainscricao) {
+
     // primeiro cálculo
 
     const peso = [9,8,7,6,5,4,3,2]; 
@@ -33,41 +34,46 @@ if (validainscricao) {
     }
 
     console.log(produto)
-    console.log(resto)
-    console.table(ie2)
 
+  } else {
+    console.log("Inscrição inválida");
+  }
+
+} else if (inscricao.length === 10) {
+  const validainscricao = /^[0-9]{10}$/.test(inscricao);
+
+  if (validainscricao) {
 
     // segundo cálculo 
 
-
-    const peso1 = [10, 9,8,7,6,5,4,3,2]; 
+    const peso1 = [10, 9, 8, 7, 6, 5, 4, 3, 2];
     const ie4 = [];
-
-
+    
     for (let i = 0; i < 8; i++) {
-    ie4.push(parseInt(inscricao[i]) * peso1[i]);
+      ie4.push(parseInt(inscricao[i]) * peso1[i]);
     }
-
-
+    
     const somaProdutos1 = ie4.reduce(function (acumulador, valor) {
-    return acumulador + valor;
+      return acumulador + valor;
     }, 0);
-
-
-    const produto1 = somaProdutos1 * 10
+    
+    const produto1 = somaProdutos1 * 10; // Multiplicação da soma total por 10
     const resto1 = produto1 % 11;
-
-    let digitoVerificador1
+    
+    let digitoVerificador1;
     if (resto1 === 10) {
-     digitoVerificador1 = 0;
+      digitoVerificador1 = 0;
     } else {
-        digitoVerificador1 = resto1;
+      digitoVerificador1 = resto1;
     }
-
+    
+    console.table(ie4)
     console.log(produto1)
-    console.log(resto1)
-    console.table(ie2)
+
+  } else {
+    false
+  }
 
 } else {
-    false
+  false
 }
