@@ -4,10 +4,9 @@ inscricao = inscricao.replace(/\D/g, '');
 
 if (inscricao.length === 9) {
   const validainscricao = /^[0-9]{9}$/.test(inscricao);
-
   if (validainscricao) {
-
-    // primeiro cálculo
+    if(inscricao[2] == 2 && inscricao[0] == 0){
+       // primeiro cálculo
 
     const peso = [9,8,7,6,5,4,3,2]; 
     const ie2 = [];
@@ -44,7 +43,8 @@ if (inscricao.length === 9) {
 
   if (validainscricao) {
 
-    // segundo cálculo 
+    if(inscricao[2] == 2 && inscricao[0] == 0){
+      // segundo cálculo 
 
     const peso1 = [10, 9, 8, 7, 6, 5, 4, 3, 2];
     const ie4 = [];
@@ -81,6 +81,8 @@ if (inscricao.length === 9) {
   } else {
     false
   }
+    }
+    }
 } else {
   false
 }
