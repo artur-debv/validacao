@@ -74,6 +74,13 @@ if (inscricao.length === 9) {
     false
   }
 
+  if(inscricao[8] == digitoVerificador && inscricao[9] == digitoVerificador1){
+    // console.log("sim")
+    return true
+  }else{
+    // console.log("não")
+    return false
+  }
 } else {
   false
 }
