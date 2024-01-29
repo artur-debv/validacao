@@ -1,4 +1,4 @@
-let inscricao = "";
+let inscricao = "110.042.490.114";
 
 inscricao = inscricao.replace(/\D/g, '');
 
@@ -10,17 +10,16 @@ if (inscricao.length === 12) {
 
     const pesos1 = [1, 3, 4, 5, 6, 7, 8, 10];
 
-    let ie = "110042490114";
-    let ie2 = [];
+    let ie = [];
 
 
     for (let i = 0; i < 8; i++) {
-      ie2.push(parseInt(ie[i]) * pesos1[i]);
+      ie.push(parseInt(inscricao[i]) * pesos1[i]);
     }
 
-    console.table(ie2);
+    console.table(ie);
 
-    const somaProdutos1 = ie2.reduce(function (acumulador, valor) {
+    const somaProdutos1 = ie.reduce(function (acumulador, valor) {
       return acumulador + valor;
     }, 0)
 
@@ -33,12 +32,12 @@ if (inscricao.length === 12) {
 
     // segundo cálculo
 
-    let ie3 = [];
+    let ie2 = [];
 
     const pesos2 = [3, 2, 10, 9, 8, 7, 6, 5, 4, 3, 2];
 
     for (let i = 0; i < 11; i++) {
-      ie3.push(parseInt(ie[i], 10) * pesos2[i]);
+      ie2.push(parseInt(inscricao[i], 10) * pesos2[i]);
     }
 
     const somaProdutosb = ie2.reduce(function (acumulador, valor) {
@@ -52,8 +51,8 @@ if (inscricao.length === 12) {
     console.log(restoString1)
 
 
-    const digitoverificador1 = resto.charAt(1)
-    const digitoverificador2 = resto.charAt(1)
+    const digitoverificador1 = resto[1]
+    const digitoverificador2 = resto[1]
 
     if (ie[8] == digitoverificador1 && ie[4] == digitoverificador2) {
       return true
@@ -73,16 +72,16 @@ if (inscricao.length === 12) {
 
     const pesos3 = [1, 3, 4, 5, 6, 7, 8, 10];
 
-    let ieb = "01100424002";
-    let ie4 = [];
+    
+    let ie3 = [];
 
     for (let i = 0; i < 8; i++) {
-      ie4.push(parseInt(ieb[i]) * pesos3[i]);
+      ie3.push(parseInt(inscricao[i]) * pesos3[i]);
     }
 
-    console.table(ie4);
+    console.table(ie3);
 
-    const somaProdutosc = ie4.reduce(function (acumulador, valor) {
+    const somaProdutosc = ie3.reduce(function (acumulador, valor) {
       return acumulador + valor;
     }, 0);
 
@@ -92,7 +91,7 @@ if (inscricao.length === 12) {
 
     console.log(restoString3)
 
-    const digitoverificador3 = resto.charAt(1)
+    const digitoverificador3 = resto3.charAt(1)
 
 
     if (ie[8] == digitoverificador3) {
