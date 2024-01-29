@@ -6,29 +6,34 @@ inscricao = inscricao.replace(/\D/g, '');
 const validainscricao = /^[0-9]{9}$/.test(inscricao);
 
 if (validainscricao) {
-    const peso = [1, 2, 3, 4, 5, 6, 7, 8];
-    const ie = []
+    if (inscricao[0] == 2 && inscricao[1] == 4) {
+        const peso = [1, 2, 3, 4, 5, 6, 7, 8];
+        const ie = []
 
-    for (let i = 0; i < 8; i++) {
-        ie.push(parseInt(inscricao[i]) * peso[i]);
-    }
+        for (let i = 0; i < 8; i++) {
+            ie.push(parseInt(inscricao[i]) * peso[i]);
+        }
 
-    const somaProdutos = ie.reduce(function (acumulador, valor) {
-        return acumulador + valor;
-    }, 0);
+        const somaProdutos = ie.reduce(function (acumulador, valor) {
+            return acumulador + valor;
+        }, 0);
 
-    const resto = somaProdutos % 9;
+        const resto = somaProdutos % 9;
 
-    digitoVerificador = resto
+        digitoVerificador = resto
 
-    if (inscricao[8] == digitoVerificador) {
-        //console.log('sim')
-        true
+        if (inscricao[8] == digitoVerificador) {
+            //console.log('sim')
+            true
+        } else {
+            //console.log('não')
+            false
+        }
     } else {
-        //console.log('não')
         false
     }
 
 } else {
     false
 }
+
