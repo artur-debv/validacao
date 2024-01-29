@@ -70,16 +70,16 @@ if (inscricao.length === 9) {
     console.table(ie4)
     console.log(produto1)
 
+    if(inscricao[8] == digitoVerificador && inscricao[9] == digitoVerificador1){
+      // console.log("sim")
+      return true
+    }else{
+      // console.log("não")
+      return false
+    }
+
   } else {
     false
-  }
-
-  if(inscricao[8] == digitoVerificador && inscricao[9] == digitoVerificador1){
-    // console.log("sim")
-    return true
-  }else{
-    // console.log("não")
-    return false
   }
 } else {
   false
