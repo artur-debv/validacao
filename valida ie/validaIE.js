@@ -26,10 +26,11 @@ import validaIESE from "./validaIESE.js";
 import validaIESP from "./validaIESP.js";
 import validaIETO from "./validaIETO.js";
 
-function validarInscricaoEstadual(inscricao, estado) {
+const estado = 'ac';
+const inscricao = "01.004.823/001-12";
 
-    inscricao = inscricao.replace(/\D/g, '');
-    
+function validarInscricaoEstadual() {    
+
     switch (estado.toUpperCase()) {
         case 'AC':
             validaIEAC(inscricao);
@@ -119,4 +120,4 @@ function validarInscricaoEstadual(inscricao, estado) {
 }
 
 
-console.log(validarInscricaoEstadual('AC', '01.004.823/001-12'))
+console.log(validarInscricaoEstadual(estado, inscricao))
