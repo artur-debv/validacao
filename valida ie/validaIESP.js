@@ -59,7 +59,6 @@ function validaIESP() {
       }
 
     } else {
-      console.log('nao 1')
       return false
     }
 
@@ -99,7 +98,6 @@ function validaIESP() {
     }
 
   } else {
-    console.log('nao')
     return false
   }
 
