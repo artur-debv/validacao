@@ -60,5 +60,7 @@ function validaIEPR() {
 
 }
 
+export default validaIEPR
+
 //let inscricao = "123.45678-50";
 //console.log(validaIEPR(inscricao))

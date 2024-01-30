@@ -56,5 +56,7 @@ function validaIEMG() {
 
 }
 
+export default validaIEMG
+
 //let inscricao = "062.307.904/0081";
 //console.log(validaIEMG(inscricao))

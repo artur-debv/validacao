@@ -44,6 +44,8 @@ function validaIEMA() {
 
 }
 
+export default validaIEMA
+
 
 //let inscricao = "120000385";
 //console.log(validaIEMA(inscricao))

@@ -61,6 +61,7 @@ function validaIEPE() {
 
 }
 
+export default validaIEPE
 
 //let inscricao = "0321418-40";
 //console.log(validaIEPE(inscricao))

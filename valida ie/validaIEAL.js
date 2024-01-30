@@ -47,5 +47,7 @@ function validaIEAL() {
 
 }
 
+export default validaIEAL
+
 //let inscricao = "2400000-48"
 //console.log(validaIEAL(inscricao))

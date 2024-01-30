@@ -44,5 +44,7 @@ function validaIEAM() {
 
 }
 
+export default validaIEAM
+
 //let inscricao = "99.999.999-0";
 //console.log(validaIEAM(inscricao))

@@ -51,5 +51,7 @@ function validaIEMS() {
 
 }
 
+export default validaIEMS
+
 //let inscricao = "283456787";
 //console.log(validaIEMS(inscricao))

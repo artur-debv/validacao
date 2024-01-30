@@ -44,5 +44,7 @@ function validaIEPA() {
 
 }
 
+export default validaIEPA
+
 //let inscricao = "15-999999-5";
 //console.log(validaIEPA(inscricao))

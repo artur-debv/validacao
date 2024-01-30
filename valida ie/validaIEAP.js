@@ -59,5 +59,7 @@ function validaIEAP() {
 
 }
 
+export default validaIEAP
+
 //let inscricao = "030123459";
 //console.log(validaIEAP(inscricao))

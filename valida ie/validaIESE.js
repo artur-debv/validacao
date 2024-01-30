@@ -38,5 +38,7 @@ function validaIESE() {
 
 }
 
+export default validaIESE
+
 //let inscricao = "27123456-3";
 //console.log(validaIESE(inscricao))

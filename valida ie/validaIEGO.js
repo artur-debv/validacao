@@ -44,6 +44,8 @@ function validaIEGO() {
 
 }
 
+export default validaIEGO
+
 //let inscricao = "10.987.654-7";
 //console.log(validaIEGO(inscricao))
 

@@ -40,5 +40,7 @@ function validaIETO() {
 
 }
 
+export default validaIETO
+
 //let inscricao = "29010227836";
 //console.log(validaIETO(inscricao))

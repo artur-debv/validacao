@@ -40,5 +40,7 @@ function validaIEMT() {
 
 }
 
+export default validaIEMT
+
 //let inscricao = "0013000001-9";
 //console.log(validaIEMT(inscricao))

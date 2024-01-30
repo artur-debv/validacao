@@ -81,6 +81,8 @@ function validaIERO() {
 
 }
 
+export default validaIERO
+
 //let inscricao = "101.62521-3";
 //let inscricao = "0000000062521-3";
 //console.log(validaIERO(inscricao))

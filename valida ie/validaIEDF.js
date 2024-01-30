@@ -59,5 +59,7 @@ function validaIEDF() {
 
 }
 
+export default validaIEDF
+
 //let inscricao = "07 300001 001 - 09";
 //console.log(validaIEDF(inscricao))

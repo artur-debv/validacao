@@ -39,5 +39,7 @@ function validaIERR() {
 
 }
 
+export default validaIERR
+
 //let inscricao = "24006153-6";
 //console.log(validaIERR(inscricao))

@@ -98,6 +98,8 @@ function validaIERN() {
 
 }
 
+export default validaIERN
+
 //let inscricao = "20.040.040-1";
 //let inscricao = "20.0.040.040-0";
 //console.log(validaIERN(inscricao))

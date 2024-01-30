@@ -39,5 +39,7 @@ function validaIERS() {
 
 }
 
+export default validaIERS
+
 //let inscricao = "2243658792";
 //console.log(validaIERS(inscricao))

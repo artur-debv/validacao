@@ -39,5 +39,7 @@ function validaIESC() {
 
 }
 
+export default validaIESC
+
 //let inscricao = "251040852";
 //console.log(validaIESC(inscricao))

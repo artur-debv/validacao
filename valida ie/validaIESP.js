@@ -103,6 +103,8 @@ function validaIESP() {
 
 }
 
+export default validaIESP
+
 //let inscricao = "110.042.490.114";
 //let inscricao = "P-01100424.3/002";
 //console.log(validaIESP(inscricao))

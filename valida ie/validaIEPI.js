@@ -37,5 +37,8 @@ function validaIEPI() {
     }
 
 }
+
+export default validaIEPI
+
 //let inscricao = "012345679";
 //console.log(validaIEPI(inscricao))

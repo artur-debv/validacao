@@ -39,5 +39,7 @@ function validaIEES() {
 
 }
 
+export default validaIEES
+
 //let inscricao = "999999990";
 //console.log(validaIEES(inscricao))

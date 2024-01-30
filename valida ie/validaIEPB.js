@@ -37,5 +37,7 @@ function validaIEPB() {
 
 }
 
+export default validaIEPB
+
 //let inscricao = "06000001-5";
 //console.log(validaIEPB(inscricao))

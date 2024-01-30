@@ -38,5 +38,7 @@ function validaIECE() {
 
 }
 
+export default validaIECE
+
 //let inscricao = "06000001-5";
 //console.log(validaIECE(inscricao))

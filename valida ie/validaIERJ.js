@@ -39,5 +39,7 @@ function validaIERJ() {
 
 }
 
+export default validaIERJ
+
 //let inscricao = "99.999.99-3";
 //console.log(validaIERJ(inscricao))
