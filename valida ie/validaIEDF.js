@@ -1,4 +1,4 @@
-function validaIEDF() {
+function validaIEDF(inscricao) {
 
     inscricao = inscricao.replace(/\D/g, '');
 

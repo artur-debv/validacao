@@ -1,4 +1,4 @@
-function validaIESP() {
+function validaIESP(inscricao) {
 
   function reverseNumber(num) {
     return reversedString = num.toString().split('').reverse().join('');

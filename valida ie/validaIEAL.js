@@ -1,4 +1,4 @@
-function validaIEAL() {
+function validaIEAL(inscricao) {
 
   inscricao = inscricao.replace(/\D/g, '');
 

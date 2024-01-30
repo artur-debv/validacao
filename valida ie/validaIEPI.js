@@ -1,4 +1,4 @@
-function validaIEPI() {
+function validaIEPI(inscricao) {
 
     inscricao = inscricao.replace(/\D/g, '');
 

@@ -1,4 +1,4 @@
-function validaIESE() {
+function validaIESE(inscricao) {
 
     inscricao = inscricao.replace(/\D/g, '');
 

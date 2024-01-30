@@ -1,5 +1,5 @@
 
-function validaIEMT() {
+function validaIEMT(inscricao) {
 
     inscricao = inscricao.replace(/\D/g, '');
 

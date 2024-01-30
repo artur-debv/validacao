@@ -1,4 +1,4 @@
-function validaIEPA() {
+function validaIEPA(inscricao) {
 
     inscricao = inscricao.replace(/\D/g, '');
 

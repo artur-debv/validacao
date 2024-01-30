@@ -1,4 +1,4 @@
-function validaIEGO() {
+function validaIEGO(inscricao) {
 
     inscricao = inscricao.replace(/\D/g, '');
 

@@ -1,4 +1,4 @@
-function validaIEPR() {
+function validaIEPR(inscricao) {
 
     inscricao = inscricao.replace(/\D/g, '');
 

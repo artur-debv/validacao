@@ -1,4 +1,4 @@
-function validaIEMS() {
+function validaIEMS(inscricao) {
 
     inscricao = inscricao.replace(/\D/g, '');
 
