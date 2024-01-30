@@ -29,7 +29,7 @@ import validaIETO from "./validaIETO.js";
 const estado = 'ac';
 let inscricao = "01.004.823/001-12";
 
-function validarInscricaoEstadual(estado, inscricao) {    
+function validarInscricaoEstadual(estado, inscricao) {
 
     let resultado;
 
@@ -56,7 +56,7 @@ function validarInscricaoEstadual(estado, inscricao) {
              resultado = validaIEDF(inscricao);
             break;
         case 'ES':
-             resultado = validaIEES(inscricao);
+resultado = validaIEES(inscricao);
             break;
         case 'GO':
              resultado = validaIEGO(inscricao);
@@ -89,7 +89,7 @@ function validarInscricaoEstadual(estado, inscricao) {
              resultado = validaIEPI(inscricao);
             break;
         case 'RJ':
-             resultado = validaIERJ(inscricao);
+resultado = validaIERJ(inscricao);
             break;
         case 'RN':
              resultado = validaIERN(inscricao);
@@ -124,4 +124,3 @@ function validarInscricaoEstadual(estado, inscricao) {
 }
 
 console.log(validarInscricaoEstadual(estado, inscricao))
-
