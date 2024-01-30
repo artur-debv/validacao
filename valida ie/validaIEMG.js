@@ -1,57 +1,60 @@
-let inscricao = "062.307.904/0081";
+function validaIEMG() {
 
-inscricao = inscricao.replace(/\D/g, '');
+  inscricao = inscricao.replace(/\D/g, '');
 
-const validainscricao = /^[0-9]{13}$/.test(inscricao);
+  const validainscricao = /^[0-9]{13}$/.test(inscricao);
 
-if (validainscricao) {
+  if (validainscricao) {
 
-  // primeiro Cálculo
+    // primeiro Cálculo
+    const inscricaoSlice = inscricao.slice(0, 3) + "0" + inscricao.slice(3);
+    const peso = [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2];
+    const ie = [];
 
-  const inscricaoSlice = inscricao.slice(0, 3) + "0" + inscricao.slice(3);
-  const peso = [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2];
-  const ie = [];
+    for (let i = 0; i < 10; i++) {
+      ie.push(parseInt(inscricaoSlice[i]) * peso[i]);
+    }
 
-  for (let i = 0; i < 10; i++) {
-    ie.push(parseInt(inscricaoSlice[i]) * peso[i]);
-  }
+    const somaProdutos = ie.reduce((acumulador, valor) => {
+      const digitos = valor.toString().split('').map(Number);
+      return acumulador + digitos.reduce((a, b) => a + b, 0);
+    }, 0);
 
-  const somaProdutos = ie.reduce((acumulador, valor) => {
-    const digitos = valor.toString().split('').map(Number);
-    return acumulador + digitos.reduce((a, b) => a + b, 0);
-  }, 0);
+    const digitoVerificador = (10 - (somaProdutos % 10)) % 10;
 
-  const digitoVerificador = (10 - (somaProdutos % 10)) % 10;
+    // segundo Cálculo 
+    const peso2 = [3, 2, 1, 1, 1, 0, 9, 8, 7, 6, 5, 4, 3, 2];
+    const ie2 = [];
 
-  // segundo Cálculo 
+    for (let i = 0; i < 8; i++) {
+      ie2.push(parseInt(inscricao[i]) * peso2[i]);
+    }
 
-  const peso2 = [3, 2, 1, 1, 1, 0, 9, 8, 7, 6, 5, 4, 3, 2];
-  const ie2 = [];
+    const somaProdutos2 = ie2.reduce(function (acumulador, valor) {
+      return acumulador + valor;
+    }, 0);
 
-  for (let i = 0; i < 8; i++) {
-    ie2.push(parseInt(inscricao[i]) * peso2[i]);
-  }
+    const resto = somaProdutos2 % 11;
 
-  const somaProdutos1 = ie2.reduce(function (acumulador, valor) {
-    return acumulador + valor;
-  }, 0);
+    if (resto === 0 || resto === 1) {
+      digitoVerificador2 = 0;
 
-  const resto = somaProdutos1 % 11;
+    } else {
+      digitoVerificador2 = 11 - resto;
+    }
 
-  if (resto <= 1) {
-    digitoVerificador2 = 0;
+    if (inscricao[11] == digitoVerificador && inscricao[12] == digitoVerificador2) {
+      return true
+
+    } else {
+      return false
+    }
+
   } else {
-    digitoVerificador2 = 11 - resto;
+    return false
   }
 
-  if (inscricao[11] == digitoVerificador && inscricao[12] == digitoVerificador2) {
-    // console.log('sim')
-    true
-  } else {
-    // console.log('não')
-    false
-  }
-
-} else {
-  false
 }
+
+//let inscricao = "062.307.904/0081";
+//console.log(validaIEMG(inscricao))
