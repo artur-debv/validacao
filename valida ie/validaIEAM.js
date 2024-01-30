@@ -1,40 +1,48 @@
-let inscricao = "99.999.999-0";
+function validaIEAM() {
 
-inscricao = inscricao.replace(/\D/g, '');
+    inscricao = inscricao.replace(/\D/g, '');
 
-const validainscricao = /^[0-9]{9}$/.test(inscricao);
+    const validainscricao = /^[0-9]{9}$/.test(inscricao);
 
-if (validainscricao) {
-    const peso = [9, 8, 7, 6, 5, 4, 3, 2];
-    const ie = [];
+    if (validainscricao) {
 
-    for (let i = 0; i < 8; i++) {
-        ie.push(parseInt(inscricao[i]) * peso[i]);
-    }
+        const peso = [9, 8, 7, 6, 5, 4, 3, 2];
+        const ie = [];
 
-    const somaProdutos = ie.reduce(function (acumulador, valor) {
-        return acumulador + valor;
-    }, 0);
-
-    if (somaProdutos < 11){
-        digitoVerificador = 11 - somaProdutos;
-    } else {
-        resto = somaProdutos % 11;
-        if (resto <= 1){
-            digitoVerificador = 0;
-        } else {
-            digitoVerificador = 11 - resto
+        for (let i = 0; i < 8; i++) {
+            ie.push(parseInt(inscricao[i]) * peso[i]);
         }
+
+        const somaProdutos = ie.reduce(function (acumulador, valor) {
+            return acumulador + valor;
+        }, 0);
+
+        if (somaProdutos < 11) {
+            digitoVerificador = 11 - somaProdutos;
+
+        } else {
+            resto = somaProdutos % 11;
+
+            if (resto <= 1) {
+                digitoVerificador = 0;
+
+            } else {
+                digitoVerificador = 11 - resto
+            }
+        }
+
+        if (inscricao[8] == digitoVerificador) {
+            return true
+
+        } else {
+            return false
+        }
+
+    } else {
+        return false
     }
 
-    if (inscricao[8] == digitoVerificador) {
-        //console.log('sim')
-        true
-      } else {
-        //console.log('não')
-        false
-      }
-
-} else {
-    false
 }
+
+//let inscricao = "99.999.999-0";
+//console.log(validaIEAM(inscricao))
