@@ -26,98 +26,101 @@ import validaIESE from "./validaIESE.js";
 import validaIESP from "./validaIESP.js";
 import validaIETO from "./validaIETO.js";
 
-const estado = 'ac';
-let inscricao = "01.004.823/001-12";
+const estado = '';
+let inscricao = '';
 
 function validarInscricaoEstadual(estado, inscricao) {    
 
+    let resultado;
+
     switch (estado.toUpperCase()) {
         case 'AC':
-            validaIEAC(inscricao);
+            resultado = validaIEAC(inscricao);
             break;
         case 'AL':
-            validaIEAL(inscricao);
+             resultado = validaIEAL(inscricao);
             break;
         case 'AP':
-            validaIEAP(inscricao);
+             resultado = validaIEAP(inscricao);
             break;
         case 'AM':
-            validaIEAM(inscricao);
+             resultado = validaIEAM(inscricao);
             break;
         case 'BA':
-            validaIEBA(inscricao);
+             resultado = validaIEBA(inscricao);
             break;
         case 'CE':
-            validaIECE(inscricao);
+             resultado = validaIECE(inscricao);
             break;
         case 'DF':
-            validaIEDF(inscricao);
+             resultado = validaIEDF(inscricao);
             break;
         case 'ES':
-            validaIEES(inscricao);
+             resultado = validaIEES(inscricao);
             break;
         case 'GO':
-            validaIEGO(inscricao);
+             resultado = validaIEGO(inscricao);
             break;
         case 'MA':
-            validaIEMA(inscricao);
+             resultado = validaIEMA(inscricao);
             break;
         case 'MT':
-            validaIEMT(inscricao);
+             resultado = validaIEMT(inscricao);
             break;
         case 'MS':
-            validaIEMS(inscricao);
+             resultado = validaIEMS(inscricao);
             break;
         case 'MG':
-            validaIEMG(inscricao);
+             resultado = validaIEMG(inscricao);
             break;
         case 'PA':
-            validaIEPA(inscricao);
+             resultado = validaIEPA(inscricao);
             break;
         case 'PB':
-            validaIEPB(inscricao);
+             resultado = validaIEPB(inscricao);
             break;
         case 'PR':
-            validaIEPR(inscricao);
+             resultado = validaIEPR(inscricao);
             break;
         case 'PE':
-            validaIEPE(inscricao);
+             resultado = validaIEPE(inscricao);
             break;
         case 'PI':
-            validaIEPI(inscricao);
+             resultado = validaIEPI(inscricao);
             break;
         case 'RJ':
-            validaIERJ(inscricao);
+             resultado = validaIERJ(inscricao);
             break;
         case 'RN':
-            validaIERN(inscricao);
+             resultado = validaIERN(inscricao);
             break;
         case 'RS':
-            validaIERS(inscricao);
+             resultado = validaIERS(inscricao);
             break;
         case 'RO':
-            validaIERO(inscricao);
+             resultado = validaIERO(inscricao);
             break;
         case 'RR':
-            validaIERR(inscricao);
+             resultado = validaIERR(inscricao);
             break;
         case 'SC':
-            validaIESC(inscricao);
+             resultado = validaIESC(inscricao);
             break;
         case 'SP':
-            validaIESP(inscricao);
+             resultado = validaIESP(inscricao);
             break;
         case 'SE':
-            validaIESE(inscricao);
+             resultado = validaIESE(inscricao);
             break;
         case 'TO':
-            validaIETO(inscricao);
+             resultado = validaIETO(inscricao);
             break;
         default:
             console.error('Estado não suportado para validação.');
             return false;
     }
-}
 
+    return resultado
+}
 
 console.log(validarInscricaoEstadual(estado, inscricao))
