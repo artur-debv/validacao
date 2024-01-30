@@ -65,6 +65,7 @@ function validaIEAC(inscricao) {
 
 }
 
+
 export default validaIEAC
 
 //let inscricao = "01.004.823/001-12";
