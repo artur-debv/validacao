@@ -1,63 +1,66 @@
-let inscricao = '0321418-40';
+function validaIEPE() {
 
-inscricao = inscricao.replace(/\D/g, '');
+  inscricao = inscricao.replace(/\D/g, '');
 
-const validainscricao = /^[0-9]{9}$/.test(inscricao);
+  const validainscricao = /^[0-9]{9}$/.test(inscricao);
 
-if (validainscricao) {
-  // primeiro cálculo
+  if (validainscricao) {
+    
+    // primeiro cálculo
+    const peso = [8, 7, 6, 5, 4, 3, 2];
+    const ie = [];
 
-  const peso = [8, 7, 6, 5, 4, 3, 2];
-  const ie = [];
+    for (let i = 0; i < 7; i++) {
+      ie.push(parseInt(inscricao[i]) * peso[i]);
+    }
 
-  for (let i = 0; i < 7; i++) {
-    ie.push(parseInt(inscricao[i]) * peso[i]);
-  }
+    const somaProdutos = ie.reduce(function (acumulador, valor) {
+      return acumulador + valor;
+    }, 0);
 
-  const somaProdutos = ie.reduce(function (acumulador, valor) {
-    return acumulador + valor;
-  }, 0);
+    const resto = somaProdutos % 11;
 
-  const resto = somaProdutos % 11;
+    if (resto === 0 || resto === 1) {
+      digitoVerificador1 = 0;
 
-  let digitoVerificador1;
-  if (resto === 0 || resto === 1) {
-    digitoVerificador1 = 0;
+    } else {
+      digitoVerificador1 = 11 - resto;
+    }
+
+    // segundo cálculo
+    const peso2 = [9, 8, 7, 6, 5, 4, 3, 2];
+    const ie2 = [];
+
+    for (let i = 0; i < 8; i++) {
+      ie2.push(parseInt(inscricao[i]) * peso2[i]);
+    }
+
+    const somaProdutos2 = ie2.reduce(function (acumulador, valor) {
+      return acumulador + valor;
+    }, 0);
+
+    const resto2 = somaProdutos2 % 11;
+
+    if (resto2 === 0 || resto2 === 1) {
+      digitoVerificador2 = 0;
+
+    } else {
+      digitoVerificador2 = 11 - resto2;
+    }
+
+    if (inscricao[7] == digitoVerificador1 && inscricao[8] == digitoVerificador2) {
+      return true
+
+    } else {
+      return false
+    }
 
   } else {
-    digitoVerificador1 = 11 - resto;
+    return false
   }
 
-  // segundo cálculo
-  const peso2 = [9, 8, 7, 6, 5, 4, 3, 2];
-  const ie2 = [];
-
-  for (let i = 0; i < 8; i++) {
-    ie2.push(parseInt(inscricao[i]) * peso2[i]);
-  }
-
-  const somaProdutos2 = ie2.reduce(function (acumulador, valor) {
-    return acumulador + valor;
-  }, 0);
-
-  const resto2 = somaProdutos2 % 11;
-
-  let digitoVerificador2;
-  if (resto2 === 0 || resto2 === 1) {
-    digitoVerificador2 = 0;
-
-  } else {
-    digitoVerificador2 = 11 - resto2;
-  }
-
-  if (inscricao[7] == digitoVerificador1 && inscricao[8] == digitoVerificador2) {
-    //console.log('sim')
-    true
-  } else {
-    //console.log('não')
-    false
-  }
-
-} else {
-  false
 }
+
+
+//let inscricao = "0321418-40";
+//console.log(validaIEPE(inscricao))
