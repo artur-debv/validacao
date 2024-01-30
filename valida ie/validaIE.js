@@ -1,30 +1,30 @@
-import validaIEAC from "./validaIEAC";
-import validaIEAL from "./validaIEAL";
-import validaIEAM from "./validaIEAM";
-import validaIEAP from "./validaIEAP";
-import validaIEBA from "./validaIEBA";
-import validaIECE from "./validaIECE";
-import validaIEDF from "./validaIEDF";
-import validaIEES from "./validaIEES";
-import validaIEGO from "./validaIEGO";
-import validaIEMA from "./validaIEMA";
-import validaIEMG from "./validaIEMG";
-import validaIEMS from "./validaIEMS";
-import validaIEMT from "./validaIEMT";
-import validaIEPA from "./validaIEPA";
-import validaIEPB from "./validaIEPB";
-import validaIEPE from "./validaIEPE";
-import validaIEPI from "./validaIEPI";
-import validaIEPR from "./validaIEPR";
-import validaIERJ from "./validaIERJ";
-import validaIERN from "./validaIERN";
-import validaIERO from "./validaIERO";
-import validaIERR from "./validaIERR";
-import validaIERS from "./validaIERS";
-import validaIESC from "./validaIESC";
-import validaIESE from "./validaIESE";
-import validaIESP from "./validaIESP";
-import validaIETO from "./validaIETO";
+import validaIEAC from "./validaIEAC.js";
+import validaIEAL from "./validaIEAL.js";
+import validaIEAM from "./validaIEAM.js";
+import validaIEAP from "./validaIEAP.js";
+import validaIEBA from "./validaIEBA.js";
+import validaIECE from "./validaIECE.js";
+import validaIEDF from "./validaIEDF.js";
+import validaIEES from "./validaIEES.js";
+import validaIEGO from "./validaIEGO.js";
+import validaIEMA from "./validaIEMA.js";
+import validaIEMG from "./validaIEMG.js";
+import validaIEMS from "./validaIEMS.js";
+import validaIEMT from "./validaIEMT.js";
+import validaIEPA from "./validaIEPA.js";
+import validaIEPB from "./validaIEPB.js";
+import validaIEPE from "./validaIEPE.js";
+import validaIEPI from "./validaIEPI.js";
+import validaIEPR from "./validaIEPR.js";
+import validaIERJ from "./validaIERJ.js";
+import validaIERN from "./validaIERN.js";
+import validaIERO from "./validaIERO.js";
+import validaIERR from "./validaIERR.js";
+import validaIERS from "./validaIERS.js";
+import validaIESC from "./validaIESC.js";
+import validaIESE from "./validaIESE.js";
+import validaIESP from "./validaIESP.js";
+import validaIETO from "./validaIETO.js";
 
 function validarInscricaoEstadual(inscricao, estado) {
 
@@ -118,3 +118,5 @@ function validarInscricaoEstadual(inscricao, estado) {
     }
 }
 
+
+console.log(validarInscricaoEstadual('AC', '01.004.823/001-12'))

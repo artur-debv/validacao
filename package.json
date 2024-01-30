@@ -1,0 +1,11 @@
+{
+  "name": "validacao",
+  "version": "1.0.0",
+  "description": "arquivos de validação \u0000 \u0000",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
