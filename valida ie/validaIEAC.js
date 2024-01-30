@@ -1,4 +1,4 @@
-function validaIEAC() {
+function validaIEAC(inscricao) {
 
     inscricao = inscricao.replace(/\D/g, '');
 
@@ -22,7 +22,7 @@ function validaIEAC() {
 
             const resto = somaProdutos % 11;
 
-            digitoVerificador1 = 11 - resto;
+            const digitoVerificador1 = 11 - resto;
 
             if (digitoVerificador1 === 10 || digitoVerificador1 === 11) {
                 digitoVerificador1 = 0;
@@ -42,7 +42,7 @@ function validaIEAC() {
 
             const resto2 = somaProdutos2 % 11;
 
-            digitoVerificador2 = 11 - resto2;
+            const digitoVerificador2 = 11 - resto2;
 
             if (digitoVerificador2 === 10 || digitoVerificador2 === 11) {
                 digitoVerificador2 = 0;

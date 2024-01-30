@@ -27,9 +27,9 @@ import validaIESP from "./validaIESP.js";
 import validaIETO from "./validaIETO.js";
 
 const estado = 'ac';
-const inscricao = "01.004.823/001-12";
+let inscricao = "01.004.823/001-12";
 
-function validarInscricaoEstadual() {    
+function validarInscricaoEstadual(estado, inscricao) {    
 
     switch (estado.toUpperCase()) {
         case 'AC':
