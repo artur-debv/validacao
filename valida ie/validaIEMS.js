@@ -1,49 +1,55 @@
-let inscricao = '283456789';
+function validaIEMS() {
 
-inscricao = inscricao.replace(/\D/g, '');
+    inscricao = inscricao.replace(/\D/g, '');
 
-const validainscricao = /^[0-9]{9}$/.test(inscricao);
+    const validainscricao = /^[0-9]{9}$/.test(inscricao);
 
-if (validainscricao) {
-    if (inscricao[0] == 2 && inscricao[1] == 8) {
-        const peso = [9, 8, 7, 6, 5, 4, 3, 2];
-        const ie = [];
+    if (validainscricao) {
 
-        for (let i = 0; i < 8; i++) {
-            ie.push(parseInt(inscricao[i]) * peso[i]);
-        }
+        if (inscricao[0] == 2 && inscricao[1] == 8) {
+            const peso = [9, 8, 7, 6, 5, 4, 3, 2];
+            const ie = [];
 
-        const somaProdutos = ie.reduce(function (acumulador, valor) {
-            return acumulador + valor;
-        }, 0);
+            for (let i = 0; i < 8; i++) {
+                ie.push(parseInt(inscricao[i]) * peso[i]);
+            }
 
-        const resto = somaProdutos % 11;
+            const somaProdutos = ie.reduce(function (acumulador, valor) {
+                return acumulador + valor;
+            }, 0);
 
-        if (resto === 0) {
-            digitoVerificador = 0;
+            const resto = somaProdutos % 11;
 
-        } else {
-            calc = 11 - resto;
-            if (calc > 9) {
+            if (resto === 0) {
                 digitoVerificador = 0;
 
-            } else if (calc < 10) {
-                digitoVerificador = 11 - resto
+            } else {
+                calc = 11 - resto;
+
+                if (calc > 9) {
+                    digitoVerificador = 0;
+
+                } else {
+                    digitoVerificador = calc
+                }
             }
+
+            if (inscricao[8] == digitoVerificador) {
+                return true
+
+            } else {
+                return false
+            }
+
+        } else {
+            return false
         }
 
-        if (inscricao[8] == digitoVerificador) {
-            //console.log('sim')
-            true
-        } else {
-            //console.log('não')
-            false
-        }
     } else {
-        false
+        return false
     }
 
-} else {
-    false
 }
 
+//let inscricao = "283456787";
+//console.log(validaIEMS(inscricao))
