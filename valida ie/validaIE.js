@@ -26,8 +26,8 @@ import validaIESE from "./validaIESE.js";
 import validaIESP from "./validaIESP.js";
 import validaIETO from "./validaIETO.js";
 
-const estado = '';
-let inscricao = '';
+const estado = 'ac';
+let inscricao = "01.004.823/001-12";
 
 function validarInscricaoEstadual(estado, inscricao) {    
 
@@ -124,3 +124,4 @@ function validarInscricaoEstadual(estado, inscricao) {
 }
 
 console.log(validarInscricaoEstadual(estado, inscricao))
+
