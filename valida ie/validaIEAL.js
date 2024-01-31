@@ -23,6 +23,8 @@ function validaIEAL(inscricao) {
 
       const resto = produto % 11;
 
+      let digitoVerificador;
+      
       if (resto === 10) {
         digitoVerificador = 0;
 

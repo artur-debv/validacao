@@ -20,6 +20,8 @@ function validaIETO(inscricao) {
 
     const resto = somaProdutos % 11;
 
+    let digitoVerificador;
+    
     if (resto < 2) {
       digitoVerificador = 0;
 

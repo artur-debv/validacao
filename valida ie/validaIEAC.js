@@ -22,10 +22,10 @@ function validaIEAC(inscricao) {
 
             const resto = somaProdutos % 11;
 
-            const digitoVerificador1 = 11 - resto;
+            let digitoVerificador = 11 - resto
 
-            if (digitoVerificador1 === 10 || digitoVerificador1 === 11) {
-                digitoVerificador1 = 0;
+            if (digitoVerificador === 10 || digitoVerificador === 11) {
+                digitoVerificador = 0;
             }
 
             // segundo cálculo 
@@ -42,19 +42,19 @@ function validaIEAC(inscricao) {
 
             const resto2 = somaProdutos2 % 11;
 
-            const digitoVerificador2 = 11 - resto2;
+            let digitoVerificador2 = 11 - resto2;
 
             if (digitoVerificador2 === 10 || digitoVerificador2 === 11) {
                 digitoVerificador2 = 0;
             }
 
-            if (inscricao[11] == digitoVerificador1 && inscricao[12] == digitoVerificador2) {
+            if (inscricao[11] == digitoVerificador && inscricao[12] == digitoVerificador2) {
                 return true
 
             } else {
                 return false
             }
-            
+
         } else {
             return false
         }

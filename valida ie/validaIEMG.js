@@ -20,7 +20,7 @@ function validaIEMG(inscricao) {
       return acumulador + digitos.reduce((a, b) => a + b, 0);
     }, 0);
 
-    const digitoVerificador = (10 - (somaProdutos % 10)) % 10;
+    let digitoVerificador = (10 - (somaProdutos % 10)) % 10;
 
     // segundo Cálculo 
     const peso2 = [3, 2, 1, 1, 1, 0, 9, 8, 7, 6, 5, 4, 3, 2];
@@ -35,6 +35,8 @@ function validaIEMG(inscricao) {
     }, 0);
 
     const resto = somaProdutos2 % 11;
+
+    let digitoVerificador2;
 
     if (resto === 0 || resto === 1) {
       digitoVerificador2 = 0;

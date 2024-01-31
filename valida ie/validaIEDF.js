@@ -20,7 +20,7 @@ function validaIEDF(inscricao) {
 
         const resto = somaProdutos % 11;
 
-        digitoVerificador = 11 - resto;
+        let digitoVerificador = 11 - resto;
 
         if (digitoVerificador === 10 || digitoVerificador === 11) {
             digitoVerificador = 0;
@@ -40,11 +40,11 @@ function validaIEDF(inscricao) {
 
         const resto2 = somaProdutos2 % 11;
 
-        digitoVerificador2 = 11 - resto2;
+        let digitoVerificador2 = 11 - resto2;
 
         if (digitoVerificador2 === 10 || digitoVerificador2 === 11) {
             digitoVerificador2 = 0;
-        }
+        } 
 
         if (inscricao[11] == digitoVerificador && inscricao[12] == digitoVerificador2) {
             return true

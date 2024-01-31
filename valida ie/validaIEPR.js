@@ -20,6 +20,8 @@ function validaIEPR(inscricao) {
 
         const resto = somaProdutos % 11;
 
+        let digitoVerificador;
+
         if (resto === 0 || resto === 1) {
             digitoVerificador = 0;
         } else {
@@ -39,6 +41,8 @@ function validaIEPR(inscricao) {
         }, 0)
 
         const resto2 = somaProdutos2 % 11;
+
+        let digitoVerificador2;
 
         if (resto2 === 0 || resto2 === 1) {
             digitoVerificador2 = 0;

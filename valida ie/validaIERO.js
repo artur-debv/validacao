@@ -22,11 +22,11 @@ function validaIERO(inscricao) {
 
             const resto = somaProdutos % 11;
 
-            digitoVerificador = 11 - resto;
+            let digitoVerificador = 11 - resto;
 
             if (digitoVerificador === 10 || digitoVerificador === 11) {
                 digitoVerificador = digitoVerificador - 10;
-            }
+            } 
 
             if (inscricao[8] == digitoVerificador) {
                 return true
@@ -58,11 +58,11 @@ function validaIERO(inscricao) {
 
             const resto = somaProdutos % 11;
 
-            digitoVerificador = 11 - resto;
+            let digitoVerificador = 11 - resto;
 
             if (digitoVerificador === 10 || digitoVerificador === 11) {
                 digitoVerificador = digitoVerificador - 10;
-            }
+            } 
 
             if (inscricao[13] == digitoVerificador) {
                 return true

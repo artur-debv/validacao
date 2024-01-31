@@ -25,6 +25,8 @@ function validaIERN(inscricao) {
 
         const resto = produto % 11;
 
+        let digitoVerificador;
+        
         if (resto === 10) {
           digitoVerificador = 0;
 
@@ -69,6 +71,8 @@ function validaIERN(inscricao) {
         const produto2 = somaProdutos2 * 10;
 
         const resto2 = produto2 % 11;
+
+        let digitoVerificador;
 
         if (resto2 === 10) {
           digitoVerificador = 0;

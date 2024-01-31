@@ -23,10 +23,13 @@ function validaIEBA(inscricao) {
 
                 const resto2 = somaProdutos2 % 10;
 
-                const digitoVerificador2 = 10 - resto2
+                let digitoVerificador2;
 
                 if (resto2 === 0) {
                     digitoVerificador2 = 0
+
+                } else {
+                    digitoVerificador2 = 10 - resto2;
                 }
 
                 //primeiro digito
@@ -44,10 +47,13 @@ function validaIEBA(inscricao) {
 
                 const resto = somaProdutos % 10;
 
-                const digitoVerificador = 10 - resto
+                let digitoVerificador;
 
                 if (resto === 0) {
                     digitoVerificador = 0
+
+                } else {
+                    digitoVerificador = 10 - resto;
                 }
 
                 if (inscricao[6] == digitoVerificador && inscricao[7] == digitoVerificador2) {
@@ -72,10 +78,13 @@ function validaIEBA(inscricao) {
 
                 const resto2 = somaProdutos2 % 11;
 
-                const digitoVerificador2 = 11 - resto2
+                let digitoVerificador2;
 
                 if (resto2 === 0 || resto2 === 1) {
                     digitoVerificador2 = 0
+
+                } else {
+                    digitoVerificador2 = 11 - resto2;
                 }
 
                 //primeiro digito
@@ -93,10 +102,13 @@ function validaIEBA(inscricao) {
 
                 const resto = somaProdutos % 11;
 
-                const digitoVerificador = 11 - resto
+                let digitoVerificador;
 
                 if (resto === 0 || resto === 1) {
                     digitoVerificador = 0
+
+                } else {
+                    digitoVerificador = 11 - resto;
                 }
 
                 if (inscricao[6] == digitoVerificador && inscricao[7] == digitoVerificador2) {
@@ -135,10 +147,13 @@ function validaIEBA(inscricao) {
 
                 const resto2 = somaProdutos2 % 10;
 
-                const digitoVerificador2 = 10 - resto2
+                let digitoVerificador2;
 
                 if (resto2 === 0) {
                     digitoVerificador2 = 0
+                
+                } else {
+                    digitoVerificador2 = 10 - resto2
                 }
 
                 //primeiro digito
@@ -156,15 +171,18 @@ function validaIEBA(inscricao) {
 
                 const resto = somaProdutos % 10;
 
-                digitoVerificador = 10 - resto
+                let digitoVerificador;
 
                 if (resto === 0) {
                     digitoVerificador = 0
+                
+                } else {
+                    digitoVerificador = 10 - resto
                 }
 
                 if (inscricao[7] == digitoVerificador && inscricao[8] == digitoVerificador2) {
                     return true
-                    
+
                 } else {
                     return false
                 }
@@ -184,10 +202,13 @@ function validaIEBA(inscricao) {
 
                 const resto2 = somaProdutos2 % 11;
 
-                const digitoVerificador2 = 11 - resto2
+                let digitoVerificador2;
 
                 if (resto2 === 0 || resto2 === 1) {
                     digitoVerificador2 = 0
+                
+                } else {
+                    digitoVerificador2 = 11 - resto2
                 }
 
                 //primeiro digito
@@ -205,10 +226,13 @@ function validaIEBA(inscricao) {
 
                 const resto = somaProdutos % 11;
 
-                digitoVerificador = 11 - resto
+                let digitoVerificador;
 
                 if (resto === 0 || resto === 1) {
                     digitoVerificador = 0
+                
+                } else {
+                    digitoVerificador = 11 - resto
                 }
 
                 if (inscricao[7] == digitoVerificador && inscricao[8] == digitoVerificador2) {
@@ -217,7 +241,7 @@ function validaIEBA(inscricao) {
                 } else {
                     return false
                 }
-                
+
             } else {
                 return false
             }

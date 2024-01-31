@@ -14,6 +14,9 @@ function validaIEAP(inscricao) {
         ie.push(parseInt(inscricao[i]) * peso[i]);
       }
 
+      let P;
+      let D;
+
       if (inscricao >= "03000001" && inscricao <= "03017000") {
         P = 5;
         D = 0;
@@ -33,11 +36,11 @@ function validaIEAP(inscricao) {
 
       const resto = somaProdutos % 11;
 
-      digitoVerificador = 11 - resto;
+      let digitoVerificador = 11 - resto;
 
       if (digitoVerificador === 10) {
         digitoVerificador = 0;
-        
+
       } else if (digitoVerificador === 11) {
         digitoVerificador = D;
       }

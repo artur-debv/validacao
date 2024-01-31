@@ -17,11 +17,13 @@ function validaIEAM(inscricao) {
             return acumulador + valor;
         }, 0);
 
+        let digitoVerificador;
+
         if (somaProdutos < 11) {
             digitoVerificador = 11 - somaProdutos;
 
         } else {
-            resto = somaProdutos % 11;
+            const resto = somaProdutos % 11;
 
             if (resto <= 1) {
                 digitoVerificador = 0;

@@ -20,11 +20,13 @@ function validaIEMS(inscricao) {
 
             const resto = somaProdutos % 11;
 
+            let digitoVerificador;
+            
             if (resto === 0) {
                 digitoVerificador = 0;
 
             } else {
-                calc = 11 - resto;
+                const calc = 11 - resto;
 
                 if (calc > 9) {
                     digitoVerificador = 0;

@@ -19,6 +19,8 @@ function validaIESE(inscricao) {
 
         const resto = somaProdutos % 11;
 
+        let digitoVerificador;
+        
         if (resto === 0 || resto === 1) {
             digitoVerificador = 0;
         } else {

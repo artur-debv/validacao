@@ -20,11 +20,13 @@ function validaIEPE(inscricao) {
 
     const resto = somaProdutos % 11;
 
+    let digitoVerificador;
+
     if (resto === 0 || resto === 1) {
-      digitoVerificador1 = 0;
+      digitoVerificador = 0;
 
     } else {
-      digitoVerificador1 = 11 - resto;
+      digitoVerificador = 11 - resto;
     }
 
     // segundo cálculo
@@ -41,6 +43,8 @@ function validaIEPE(inscricao) {
 
     const resto2 = somaProdutos2 % 11;
 
+    let digitoVerificador2;
+
     if (resto2 === 0 || resto2 === 1) {
       digitoVerificador2 = 0;
 
@@ -48,7 +52,7 @@ function validaIEPE(inscricao) {
       digitoVerificador2 = 11 - resto2;
     }
 
-    if (inscricao[7] == digitoVerificador1 && inscricao[8] == digitoVerificador2) {
+    if (inscricao[7] == digitoVerificador && inscricao[8] == digitoVerificador2) {
       return true
 
     } else {

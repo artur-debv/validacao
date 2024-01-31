@@ -1,7 +1,8 @@
 function validaIESP(inscricao) {
 
   function reverseNumber(num) {
-    return reversedString = num.toString().split('').reverse().join('');
+    const reversedString = num.toString().split('').reverse().join('');
+    return reversedString; 
     //return parseInt(reversedString) * Math.sign(num);
   }
 

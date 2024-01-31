@@ -20,7 +20,7 @@ function validaIERR(inscricao) {
 
             const resto = somaProdutos % 9;
 
-            digitoVerificador = resto
+            let digitoVerificador = resto
 
             if (inscricao[8] == digitoVerificador) {
                 return true
